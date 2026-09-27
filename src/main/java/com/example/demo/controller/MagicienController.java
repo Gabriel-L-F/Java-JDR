@@ -11,28 +11,28 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/guerrier")
-public class GuerrierController {
+@RequestMapping("/magicien")
+public class MagicienController {
 
-    private final GuerrierService guerrierService;
+    private final MagicienController magicienController;
 
     @Autowired
-    public GuerrierController(GuerrierService guerrierService){
-        this.guerrierService = guerrierService;
+    public MagicienController(MagicienService magicienService){
+        this.magicienService = magicienService;
     }
 
     @GetMapping
-    public List<Guerrier> getAllGuerriers() {
-        return guerrierService.getAllGuerriers();
+    public List<Magicien> getAllMagiciens() {
+        return magicienService.getAllMagiciens();
     }
 
     @PostMapping
-    public Guerrier create(@RequestParam String nom, @RequestParam String espece){
-        return guerrierService.create(nom,espece);
+    public Magicien create(@RequestParam String nom, @RequestParam String espece){
+        return magicienService.create(nom,espece);
     };
 
     @GetMapping("/caracteristiques")
     public Map<String,Integer> getCaracteristiques(@RequestParam int id) {
-        return guerrierService.getCaracteristiques(id);
+        return magicienService.getCaracteristiques(id);
     }
 }

@@ -1,0 +1,11 @@
+target/
+.git/
+.idea/
+.vscode/
+.mvn/
+node_modules/
+npm-debug.log
+.gitattributes
+README.md
+HELP.md
+*.md

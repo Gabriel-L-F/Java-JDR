@@ -11,7 +11,7 @@ import java.util.*;
 @Entity
 @Getter
 @Setter
-public class Guerrier implements Personnage {
+public class Magicien implements Personnage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,9 +29,9 @@ public class Guerrier implements Personnage {
     private String espece;
 
 
-    public Guerrier() {}
+    public Magicien() {}
 
-    public Guerrier(String nom, String espece) {
+    public Magicien(String nom, String espece) {
         this.nom = nom;
         this.espece = espece;
         this.niveau = 1;
